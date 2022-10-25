@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Jellyfin.Plugin.Streamlink</RootNamespace>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
@@ -10,14 +10,17 @@
   <ItemGroup>
     <PackageReference Include="Jellyfin.Controller" Version="10.*" />
     <PackageReference Include="Jellyfin.Model" Version="10.*" />
-    <Reference Include="Emby.Server.Implementations">
-      <HintPath>../Emby.Server.Implementations.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Configuration\configPage.html" />
     <EmbeddedResource Include="Configuration\configPage.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Emby.Server.Implementations">
+      <HintPath>..\Emby.Server.Implementations.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
